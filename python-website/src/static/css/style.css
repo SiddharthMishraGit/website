@@ -211,17 +211,33 @@ nav a:hover {
 
 .site-header {
     background-color: #1a1a1a;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #007bff;
 }
 
 .site-title {
     color: #ffffff;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+    background: linear-gradient(to right, #ffffff, #007bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+    }
+    to {
+        text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+    }
 }
