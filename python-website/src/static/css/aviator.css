@@ -1,0 +1,135 @@
+.aviator-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.multiplier {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.recent-results {
+    display: flex;
+    gap: 10px;
+}
+
+.results-list {
+    display: flex;
+    gap: 8px;
+}
+
+.result-item {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.result-win {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.result-crash {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+#aviatorCanvas {
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.betting-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bet-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bet-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bet-amount input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.bet-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.bet-btn, .cashout-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bet-btn {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.bet-btn:hover {
+    background-color: #00cc00;
+}
+
+.cashout-btn {
+    background-color: #ff3300;
+    color: #fff;
+}
+
+.cashout-btn:hover {
+    background-color: #cc2900;
+}
+
+.cashout-btn:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.auto-cashout {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.auto-cashout input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #2c2c2c;
+    color: #fff;
+    width: 120px;
+}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Mines Game{% endblock %}
+
+{% block content %}
+<div class="mines-container">
+    <div class="game-header">
+        <div class="game-stats">
+            <div class="multiplier">
+                <span>Current Multiplier:</span>
+                <span id="current-multiplier">1.00×</span>
+            </div>
+            <div class="potential-win">
+                <span>Potential Win:</span>
+                <span id="potential-win">0.00</span>
+            </div>
+        </div>
+        <div class="recent-results">
+            <div class="results-list" id="previous-results"></div>
+        </div>
+    </div>
+    
+    <div class="game-main">
+        <div class="mines-grid" id="minesGrid">
+            <!-- Grid will be populated by JavaScript -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="mines-settings">
+                <label>Number of Mines:</label>
+                <div class="mines-buttons">
+                    <button class="mine-count-btn" data-mines="3">3</button>
+                    <button class="mine-count-btn" data-mines="5">5</button>
+                    <button class="mine-count-btn" data-mines="10">10</button>
+                    <button class="mine-count-btn" data-mines="24">24</button>
+                </div>
+            </div>
+            
+            <div class="betting-controls">
+                <div class="bet-amount">
+                    <label>Bet Amount</label>
+                    <input type="number" id="betAmount" min="1" value="1">
+                </div>
+                <div class="bet-actions">
+                    <button id="placeBetBtn" class="btn bet-btn">BET</button>
+                    <button id="cashoutBtn" class="btn cashout-btn" disabled>CASHOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/mines.js') }}"></script>
+{% endblock %}
